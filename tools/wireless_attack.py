@@ -200,6 +200,15 @@ class Hcxtools(HackingTool):
     PROJECT_URL = "https://github.com/ZerBea/hcxtools"
 
 
+class Bettercap(HackingTool):
+    TITLE = "Bettercap (Network/WiFi/BLE MITM)"
+    DESCRIPTION = "Swiss army knife for WiFi, BLE, HID, and Ethernet network recon and MITM attacks."
+    SUPPORTED_OS = ["linux"]
+    INSTALL_COMMANDS = ["sudo apt-get install -y bettercap"]
+    RUN_COMMANDS = ["sudo bettercap --help"]
+    PROJECT_URL = "https://github.com/bettercap/bettercap"
+
+
 class WirelessAttackTools(HackingToolsCollection):
     TITLE = "Wireless attack tools"
     TOOLS = [
@@ -215,6 +224,7 @@ class WirelessAttackTools(HackingToolsCollection):
         Airgeddon(),
         Hcxdumptool(),
         Hcxtools(),
+        Bettercap(),
     ]
 
 

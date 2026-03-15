@@ -306,6 +306,44 @@ class Httpx(HackingTool):
     PROJECT_URL = "https://github.com/projectdiscovery/httpx"
 
 
+class SpiderFoot(HackingTool):
+    TITLE = "SpiderFoot (OSINT Automation)"
+    DESCRIPTION = "Automates OSINT collection for threat intelligence and attack surface mapping."
+    INSTALL_COMMANDS = ["pip install --user spiderfoot"]
+    RUN_COMMANDS = ["spiderfoot -h"]
+    PROJECT_URL = "https://github.com/smicallef/spiderfoot"
+
+
+class Subfinder(HackingTool):
+    TITLE = "Subfinder (Subdomain Enumeration)"
+    DESCRIPTION = "Fast passive subdomain enumeration using multiple sources."
+    REQUIRES_GO = True
+    INSTALL_COMMANDS = [
+        "go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest",
+    ]
+    RUN_COMMANDS = ["subfinder -h"]
+    PROJECT_URL = "https://github.com/projectdiscovery/subfinder"
+
+
+class TruffleHog(HackingTool):
+    TITLE = "TruffleHog (Secret Scanner)"
+    DESCRIPTION = "Find, verify, and analyze leaked credentials across git repos, S3 buckets, filesystems."
+    INSTALL_COMMANDS = ["pip install --user trufflehog"]
+    RUN_COMMANDS = ["trufflehog --help"]
+    PROJECT_URL = "https://github.com/trufflesecurity/trufflehog"
+
+
+class Gitleaks(HackingTool):
+    TITLE = "Gitleaks (Git Secret Scanner)"
+    DESCRIPTION = "Fast secret scanner for git repos — detects hardcoded passwords, API keys, tokens."
+    REQUIRES_GO = True
+    INSTALL_COMMANDS = [
+        "go install github.com/gitleaks/gitleaks/v8@latest",
+    ]
+    RUN_COMMANDS = ["gitleaks --help"]
+    PROJECT_URL = "https://github.com/gitleaks/gitleaks"
+
+
 class InformationGatheringTools(HackingToolsCollection):
     TITLE = "Information gathering tools"
     TOOLS = [
@@ -331,6 +369,10 @@ class InformationGatheringTools(HackingToolsCollection):
         Holehe(),
         Maigret(),
         Httpx(),
+        SpiderFoot(),
+        Subfinder(),
+        TruffleHog(),
+        Gitleaks(),
     ]
 
 if __name__ == "__main__":

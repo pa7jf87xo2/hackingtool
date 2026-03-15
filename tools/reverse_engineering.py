@@ -52,12 +52,38 @@ class Jadx(HackingTool):
         super().__init__(runnable=False)
 
 
+class Ghidra(HackingTool):
+    TITLE = "Ghidra (NSA Reverse Engineering)"
+    DESCRIPTION = "NSA's software reverse engineering framework — disassembly, decompilation, scripting."
+    REQUIRES_JAVA = True
+    INSTALL_COMMANDS = [
+        "sudo apt-get install -y ghidra || echo 'Download from https://ghidra-sre.org/'",
+    ]
+    RUN_COMMANDS = ["ghidra --help || echo 'Run: ghidraRun'"]
+    PROJECT_URL = "https://github.com/NationalSecurityAgency/ghidra"
+    SUPPORTED_OS = ["linux", "macos"]
+
+
+class Radare2(HackingTool):
+    TITLE = "Radare2 (RE Framework)"
+    DESCRIPTION = "Portable UNIX-like reverse engineering framework and command-line toolset."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/radareorg/radare2.git",
+        "cd radare2 && sys/install.sh",
+    ]
+    RUN_COMMANDS = ["r2 -h"]
+    PROJECT_URL = "https://github.com/radareorg/radare2"
+    SUPPORTED_OS = ["linux", "macos"]
+
+
 class ReverseEngineeringTools(HackingToolsCollection):
     TITLE = "Reverse engineering tools"
     TOOLS = [
         AndroGuard(),
         Apk2Gold(),
-        Jadx()
+        Jadx(),
+        Ghidra(),
+        Radare2(),
     ]
 
 if __name__ == "__main__":

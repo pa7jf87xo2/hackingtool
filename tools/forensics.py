@@ -128,6 +128,18 @@ class Binwalk(HackingTool):
     PROJECT_URL = "https://github.com/ReFirmLabs/binwalk"
 
 
+class Pspy(HackingTool):
+    TITLE = "pspy (Process Monitor — No Root)"
+    DESCRIPTION = "Monitor Linux processes without root — detects cron jobs, scheduled tasks, other users' commands."
+    INSTALL_COMMANDS = [
+        "curl -sSL https://github.com/DominicBreuker/pspy/releases/latest/download/pspy64 -o pspy",
+        "chmod +x pspy",
+    ]
+    RUN_COMMANDS = ["./pspy --help"]
+    PROJECT_URL = "https://github.com/DominicBreuker/pspy"
+    SUPPORTED_OS = ["linux"]
+
+
 class ForensicTools(HackingToolsCollection):
     TITLE = "Forensic tools"
     TOOLS = [
@@ -138,6 +150,7 @@ class ForensicTools(HackingToolsCollection):
         Toolsley(),
         Volatility3(),
         Binwalk(),
+        Pspy(),
     ]
 
 if __name__ == "__main__":

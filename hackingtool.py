@@ -49,6 +49,9 @@ from tools.web_attack import WebAttackTools
 from tools.wireless_attack import WirelessAttackTools
 from tools.wordlist_generator import WordlistGeneratorTools
 from tools.xss_attack import XSSAttackTools
+from tools.active_directory import ActiveDirectoryTools
+from tools.cloud_security import CloudSecurityTools
+from tools.mobile_security import MobileSecurityTools
 
 # ── Tool registry ──────────────────────────────────────────────────────────────
 
@@ -72,6 +75,9 @@ tool_definitions = [
     ("Remote Administrator Tools (RAT)",   "🖥 ", "Remote Admin (RAT)"),
     ("XSS Attack Tools",                   "💥",  "XSS Attack"),
     ("Steganography tools",                "🖼 ", "Steganography"),
+    ("Active Directory Tools",             "🏢",  "Active Directory"),
+    ("Cloud Security Tools",               "☁ ",  "Cloud Security"),
+    ("Mobile Security Tools",              "📱",  "Mobile Security"),
     ("Other tools",                        "✨",  "Other Tools"),
     ("Update or Uninstall | Hackingtool",  "♻ ",  "Update / Uninstall"),
 ]
@@ -93,6 +99,9 @@ all_tools = [
     RemoteAdministrationTools(),
     XSSAttackTools(),
     SteganographyTools(),
+    ActiveDirectoryTools(),
+    CloudSecurityTools(),
+    MobileSecurityTools(),
     OtherTools(),
     ToolManager(),
 ]
@@ -110,8 +119,8 @@ def show_help():
         Text.assemble(
             ("  Main menu\n", "bold white"),
             ("  ─────────────────────────────────────\n", "dim"),
-            ("  1–17   ", "bold cyan"), ("open a category\n", "white"),
-            ("  18     ", "bold cyan"), ("Update / Uninstall hackingtool\n", "white"),
+            ("  1–20   ", "bold cyan"), ("open a category\n", "white"),
+            ("  21     ", "bold cyan"), ("Update / Uninstall hackingtool\n", "white"),
             ("  ?      ", "bold cyan"), ("show this help\n", "white"),
             ("  q      ", "bold cyan"), ("quit hackingtool\n\n", "white"),
             ("  Inside a category\n", "bold white"),
@@ -210,7 +219,7 @@ def _build_header() -> Panel:
         ("  kernel  ›  ", info["kernel"][:34]),
         ("  user    ›  ", f"{info['user']} @ {info['host'][:20]}"),
         ("  ip      ›  ", info["ip"]),
-        ("  tools   ›  ", f"{len(all_tools)} categories · 150+ modules"),
+        ("  tools   ›  ", f"{len(all_tools)} categories · 185+ modules"),
         ("  session ›  ", info["time"]),
         ("", ""),
         ("  python  ›  ", f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"),
