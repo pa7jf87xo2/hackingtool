@@ -24,8 +24,9 @@ class AnonymouslySurf(HackingTool):
         super().__init__([("Stop", self.stop)])
 
     def stop(self):
+        import subprocess
         console.print("[bold magenta]Stopping Anonsurf...[/bold magenta]")
-        os.system("sudo anonsurf stop")
+        subprocess.run(["sudo", "anonsurf", "stop"])
 
 
 class Multitor(HackingTool):

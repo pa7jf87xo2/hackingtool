@@ -25,7 +25,8 @@ class UpdateTool(HackingTool):
         cmd = PACKAGE_UPDATE_CMDS.get(mgr)
         if cmd:
             priv = "" if CURRENT_OS.system == "macos" else "sudo "
-            os.system(f"{priv}{cmd}")
+            # shell=True needed — cmd contains && chains; strings are hardcoded, not user input
+            subprocess.run(f"{priv}{cmd}", shell=True, check=False)
         else:
             console.print("[warning]Unknown package manager — update manually.[/warning]")
 
