@@ -51,7 +51,7 @@ class StegoCracker(HackingTool):
     TITLE = "StegoCracker"
     DESCRIPTION = "StegoCracker lets you hide and retrieve data in image or audio files"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/W1LDN16H7/StegoCracker.git",
+        "git clone https://github.com/W1LDN16H7/StegoCracker.git",
         "sudo chmod -R 755 StegoCracker"
     ]
     RUN_COMMANDS = [
@@ -65,7 +65,7 @@ class Whitespace(HackingTool):
     TITLE = "Whitespace"
     DESCRIPTION = "Use whitespace and unicode characters for steganography"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/beardog108/snow10.git",
+        "git clone https://github.com/beardog108/snow10.git",
         "sudo chmod -R 755 snow10"
     ]
     RUN_COMMANDS = ["cd snow10 && ./install.sh"]

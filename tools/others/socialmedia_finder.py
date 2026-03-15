@@ -15,7 +15,7 @@ class FacialFind(HackingTool):
     INSTALL_COMMANDS = [
         "sudo apt install -y software-properties-common",
         "sudo add-apt-repository ppa:mozillateam/firefox-next && sudo apt update && sudo apt upgrade",
-        "sudo git clone https://github.com/Greenwolf/social_mapper.git",
+        "git clone https://github.com/Greenwolf/social_mapper.git",
         "sudo apt install -y build-essential cmake libgtk-3-dev libboost-all-dev",
         "cd social_mapper/setup",
         "sudo python3 -m pip install --no-cache-dir -r requirements.txt",
@@ -42,7 +42,7 @@ class FindUser(HackingTool):
     TITLE = "Find SocialMedia By UserName"
     DESCRIPTION = "Find usernames across over 75 social networks"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/xHak9x/finduser.git",
+        "git clone https://github.com/xHak9x/finduser.git",
         "cd finduser && sudo chmod +x finduser.sh"
     ]
     RUN_COMMANDS = ["cd finduser && sudo bash finduser.sh"]
@@ -75,7 +75,7 @@ class SocialScan(HackingTool):
     TITLE = "SocialScan | Username or Email"
     DESCRIPTION = "Check email address and username availability on online " \
                   "platforms with 100% accuracy"
-    INSTALL_COMMANDS = ["sudo pip install socialscan"]
+    INSTALL_COMMANDS = ["pip install --user socialscan"]
     PROJECT_URL = "https://github.com/iojw/socialscan"
 
     def run(self):

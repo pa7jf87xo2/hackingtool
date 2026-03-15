@@ -7,7 +7,7 @@ class Autophisher(HackingTool):
     TITLE = "Autophisher RK"
     DESCRIPTION = "Automated Phishing Toolkit"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/CodingRanjith/autophisher.git",
+        "git clone https://github.com/CodingRanjith/autophisher.git",
     ]
     RUN_COMMANDS = ["cd autophisher && sudo bash autophisher.sh"]
     PROJECT_URL = "https://github.com/CodingRanjith/autophisher"
@@ -30,7 +30,7 @@ class AdvPhishing(HackingTool):
     TITLE = "AdvPhishing"
     DESCRIPTION = "This is Advance Phishing Tool ! OTP PHISHING"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Ignitetch/AdvPhishing.git",
+        "git clone https://github.com/Ignitetch/AdvPhishing.git",
         # Vuln 2 fix: chmod 777 → chmod +x
         "cd AdvPhishing && chmod +x Linux-Setup.sh && bash Linux-Setup.sh",
     ]
@@ -56,7 +56,7 @@ class SocialFish(HackingTool):
     TITLE = "SocialFish"
     DESCRIPTION = "Automated Phishing Tool & Information Collector NOTE: username is 'root' and password is 'pass'"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/UndeadSec/SocialFish.git && sudo apt-get install python3 python3-pip python3-dev -y",
+        "git clone https://github.com/UndeadSec/SocialFish.git && sudo apt-get install python3 python3-pip python3-dev -y",
         "cd SocialFish && sudo python3 -m pip install -r requirements.txt",
     ]
     RUN_COMMANDS = ["cd SocialFish && sudo python3 SocialFish.py root pass"]
@@ -71,7 +71,7 @@ class HiddenEye(HackingTool):
     )
     INSTALL_COMMANDS = [
         # Vuln 2 fix: chmod 777 → chmod 755
-        "sudo git clone https://github.com/Morsmalleo/HiddenEye.git && chmod -R 755 HiddenEye",
+        "git clone https://github.com/Morsmalleo/HiddenEye.git && chmod -R 755 HiddenEye",
         "cd HiddenEye && sudo pip3 install -r requirements.txt && pip3 install pyngrok",
     ]
     RUN_COMMANDS = ["cd HiddenEye && sudo python3 HiddenEye.py"]
@@ -102,7 +102,7 @@ class ISeeYou(HackingTool):
         "[!] Expose local servers to the internet and decode location from log file."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Viralmaniar/I-See-You.git",
+        "git clone https://github.com/Viralmaniar/I-See-You.git",
         "cd I-See-You && sudo chmod u+x ISeeYou.sh",
     ]
     RUN_COMMANDS = ["cd I-See-You && sudo bash ISeeYou.sh"]
@@ -112,7 +112,7 @@ class ISeeYou(HackingTool):
 class SayCheese(HackingTool):
     TITLE = "SayCheese"
     DESCRIPTION = "Take webcam shots from target just by sending a malicious link"
-    INSTALL_COMMANDS = ["sudo git clone https://github.com/hangetzzu/saycheese"]
+    INSTALL_COMMANDS = ["git clone https://github.com/hangetzzu/saycheese"]
     RUN_COMMANDS = ["cd saycheese && sudo bash saycheese.sh"]
     PROJECT_URL = "https://github.com/hangetzzu/saycheese"
 
@@ -121,7 +121,7 @@ class QRJacking(HackingTool):
     TITLE = "QR Code Jacking"
     DESCRIPTION = "QR Code Jacking (Any Website)"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/cryptedwolf/ohmyqr.git && sudo apt -y install scrot",
+        "git clone https://github.com/cryptedwolf/ohmyqr.git && sudo apt -y install scrot",
     ]
     RUN_COMMANDS = ["cd ohmyqr && sudo bash ohmyqr.sh"]
     PROJECT_URL = "https://github.com/cryptedwolf/ohmyqr"
@@ -134,7 +134,7 @@ class BlackEye(HackingTool):
     TITLE = "BlackEye"
     DESCRIPTION = "The ultimate phishing tool with 38 websites available!"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/thelinuxchoice/blackeye",
+        "git clone https://github.com/thelinuxchoice/blackeye",
     ]
     RUN_COMMANDS = ["cd blackeye && sudo bash blackeye.sh"]
     PROJECT_URL = "https://github.com/An0nUD4Y/blackeye"
@@ -152,7 +152,7 @@ class Thanos(HackingTool):
     TITLE = "Thanos"
     DESCRIPTION = "Browser to Browser Phishing toolkit"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/TridevReddy/Thanos.git",
+        "git clone https://github.com/TridevReddy/Thanos.git",
         # Vuln 2 fix: chmod -R 777 → chmod +x
         "cd Thanos && chmod +x Thanos.sh",
     ]
@@ -179,7 +179,7 @@ class Maskphish(HackingTool):
     TITLE = "Maskphish"
     DESCRIPTION = "Hide phishing URL under a normal looking URL (google.com or facebook.com)"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/jaykali/maskphish.git",
+        "git clone https://github.com/jaykali/maskphish.git",
     ]
     RUN_COMMANDS = ["cd maskphish && sudo bash maskphish.sh"]
     PROJECT_URL = "https://github.com/jaykali/maskphish"
@@ -188,7 +188,7 @@ class Maskphish(HackingTool):
 class BlackPhish(HackingTool):
     TITLE = "BlackPhish"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/iinc0gnit0/BlackPhish.git",
+        "git clone https://github.com/iinc0gnit0/BlackPhish.git",
         "cd BlackPhish && sudo bash install.sh",
     ]
     RUN_COMMANDS = ["cd BlackPhish && sudo python3 blackphish.py"]

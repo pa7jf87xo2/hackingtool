@@ -9,7 +9,7 @@ class Sqlmap(HackingTool):
     DESCRIPTION = "sqlmap is an open source penetration testing tool that " \
                   "automates the process of detecting and exploiting SQL injection flaws " \
                   "and taking over database servers. [!] python3 sqlmap.py -u [http://example.com] --batch --banner. More usage: https://github.com/sqlmapproject/sqlmap/wiki/Usage"
-    INSTALL_COMMANDS = ["sudo git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev"]
+    INSTALL_COMMANDS = ["git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev"]
     RUN_COMMANDS = ["cd sqlmap-dev;python3 sqlmap.py --wizard"]
     PROJECT_URL = "https://github.com/sqlmapproject/sqlmap"
 
@@ -40,8 +40,10 @@ class SQLiScanner(HackingTool):
 class Explo(HackingTool):
     TITLE = "Explo"
     DESCRIPTION = "Explo is a simple tool to describe web security issues in human and machine readable format. Usage: explo [--verbose|-v] testcase.yaml | explo [--verbose|-v] examples/*.yaml"
-    INSTALL_COMMANDS = ["git clone https://github.com/dtag-dev-sec/explo.git",
-                        "cd explo;sudo python setup.py install"]
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/dtag-dev-sec/explo.git",
+        "cd explo && pip install --user .",
+    ]
     PROJECT_URL = "https://github.com/dtag-dev-sec/explo"
 
     def __init__(self):
@@ -62,7 +64,7 @@ class Leviathan(HackingTool):
     TITLE = "Leviathan - Wide Range Mass Audit Toolkit"
     DESCRIPTION = "Leviathan is a mass audit toolkit with service discovery, brute force, SQL injection detection, and custom exploit capabilities. Requires API keys."
     INSTALL_COMMANDS = ["git clone https://github.com/leviathan-framework/leviathan.git",
-                        "cd leviathan;sudo pip install -r requirements.txt"]
+                        "cd leviathan;pip install --user -r requirements.txt"]
     RUN_COMMANDS = ["cd leviathan;python leviathan.py"]
     PROJECT_URL = "https://github.com/leviathan-framework/leviathan"
 

@@ -78,7 +78,7 @@ class UFONet(HackingTool):
         "that allows performing DoS and DDoS attacks."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/epsylon/ufonet.git",
+        "git clone https://github.com/epsylon/ufonet.git",
         "cd ufonet && pip install --user .",
     ]
     RUN_COMMANDS = ["python3 ufonet --gui"]
@@ -93,7 +93,7 @@ class GoldenEye(HackingTool):
         "Usage: ./goldeneye.py <url> [OPTIONS]"
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/jseidl/GoldenEye.git",
+        "git clone https://github.com/jseidl/GoldenEye.git",
         "chmod -R 755 GoldenEye",
     ]
     PROJECT_URL = "https://github.com/jseidl/GoldenEye"
@@ -111,7 +111,7 @@ class Saphyra(HackingTool):
     DESCRIPTION = "A Python DDoS script for SECURITY TESTING PURPOSES ONLY."
     INSTALL_COMMANDS = [
         # Bug 7 fix: removed "sudo su" (first step was dropping into interactive root shell)
-        "sudo git clone https://github.com/anonymous24x7/Saphyra-DDoS.git",
+        "git clone https://github.com/anonymous24x7/Saphyra-DDoS.git",
         "chmod +x Saphyra-DDoS/saphyra.py",
     ]
     PROJECT_URL = "https://github.com/anonymous24x7/Saphyra-DDoS"

@@ -10,7 +10,7 @@ class Keydroid(HackingTool):
     DESCRIPTION = "Android Keylogger + Reverse Shell\n" \
                   "[!] You have to install Some Manually Refer Below Link:\n " \
                   "[+] https://github.com/F4dl0/keydroid"
-    INSTALL_COMMANDS = ["sudo git clone https://github.com/F4dl0/keydroid.git"]
+    INSTALL_COMMANDS = ["git clone https://github.com/F4dl0/keydroid.git"]
     RUN_COMMANDS = ["cd keydroid && bash keydroid.sh"]
     PROJECT_URL = "https://github.com/F4dl0/keydroid"
 
@@ -21,7 +21,7 @@ class MySMS(HackingTool):
                   "[!] You have to install Some Manually Refer Below Link:\n\t " \
                   "[+] https://github.com/papusingh2sms/mysms"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/papusingh2sms/mysms.git"]
+        "git clone https://github.com/papusingh2sms/mysms.git"]
     RUN_COMMANDS = ["cd mysms && bash mysms.sh"]
     PROJECT_URL = "https://github.com/papusingh2sms/mysms"
 
@@ -32,7 +32,7 @@ class LockPhish(HackingTool):
                   "lock screen, designed to\n Grab Windows credentials,Android" \
                   " PIN and iPhone Passcode using a https link."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/JasonJerry/lockphish.git"]
+        "git clone https://github.com/JasonJerry/lockphish.git"]
     RUN_COMMANDS = ["cd lockphish && bash lockphish.sh"]
     PROJECT_URL = "https://github.com/JasonJerry/lockphish"
 
@@ -42,7 +42,7 @@ class Droidcam(HackingTool):
     DESCRIPTION = "Powerful Tool For Grab Front Camera Snap Using A Link"
     INSTALL_COMMANDS = [
         # Bug 16 fix: missing comma caused two strings to be implicitly concatenated into one
-        "sudo git clone https://github.com/kinghacker0/WishFish.git",
+        "git clone https://github.com/kinghacker0/WishFish.git",
         "sudo apt install -y php wget openssh-client",
     ]
     RUN_COMMANDS = ["cd WishFish && sudo bash wishfish.sh"]
@@ -54,7 +54,7 @@ class EvilApp(HackingTool):
     DESCRIPTION = "EvilApp is a script to generate Android App that can " \
                   "hijack authenticated sessions in cookies."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/crypticterminal/EvilApp.git"]
+        "git clone https://github.com/crypticterminal/EvilApp.git"]
     RUN_COMMANDS = ["cd EvilApp && bash evilapp.sh"]
     PROJECT_URL = "https://github.com/crypticterminal/EvilApp"
 

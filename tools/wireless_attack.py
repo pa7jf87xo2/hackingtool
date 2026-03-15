@@ -11,7 +11,7 @@ class WIFIPumpkin(HackingTool):
     )
     INSTALL_COMMANDS = [
         "sudo apt install -y libssl-dev libffi-dev build-essential python3-pyqt5",
-        "sudo git clone https://github.com/P0cL4bs/wifipumpkin3.git",
+        "git clone https://github.com/P0cL4bs/wifipumpkin3.git",
         "chmod -R 755 wifipumpkin3",
         "cd wifipumpkin3 && pip install --user .",
     ]
@@ -30,7 +30,7 @@ class pixiewps(HackingTool):
     )
     INSTALL_COMMANDS = [
         # Bug 29 fix: removed wget https://pastebin.com/... (insecure download from pastebin)
-        "sudo git clone https://github.com/wiire/pixiewps.git && apt-get -y install build-essential",
+        "git clone https://github.com/wiire/pixiewps.git && apt-get -y install build-essential",
         "cd pixiewps && make",
         "cd pixiewps && sudo make install",
     ]
@@ -99,7 +99,7 @@ class Wifite(HackingTool):
     TITLE = "Wifite"
     DESCRIPTION = "Wifite is an automated wireless attack tool."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/derv82/wifite2.git",
+        "git clone https://github.com/derv82/wifite2.git",
         "cd wifite2 && pip install --user .",
     ]
     RUN_COMMANDS = ["sudo wifite"]
@@ -114,7 +114,7 @@ class EvilTwin(HackingTool):
         "Fakeap — perform Evil Twin Attack by getting credentials "
         "using a Fake page and Fake Access Point."
     )
-    INSTALL_COMMANDS = ["sudo git clone https://github.com/Z4nzu/fakeap.git"]
+    INSTALL_COMMANDS = ["git clone https://github.com/Z4nzu/fakeap.git"]
     RUN_COMMANDS = ["cd fakeap && sudo bash fakeap.sh"]
     PROJECT_URL = "https://github.com/Z4nzu/fakeap"
     SUPPORTED_OS = ["linux"]
@@ -128,7 +128,7 @@ class Fastssh(HackingTool):
         "using the most commonly used credentials."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Z4nzu/fastssh.git && cd fastssh && chmod +x fastssh.sh",
+        "git clone https://github.com/Z4nzu/fastssh.git && cd fastssh && chmod +x fastssh.sh",
         "sudo apt-get install -y sshpass netcat",
     ]
     RUN_COMMANDS = ["cd fastssh && sudo bash fastssh.sh --scan"]

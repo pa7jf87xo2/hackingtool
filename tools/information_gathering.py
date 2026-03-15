@@ -16,7 +16,7 @@ class NMAP(HackingTool):
     TITLE = "Network Map (nmap)"
     DESCRIPTION = "Free and open source utility for network discovery and security auditing"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/nmap/nmap.git",
+        "git clone https://github.com/nmap/nmap.git",
         "sudo chmod -R 755 nmap && cd nmap && sudo ./configure && make && sudo make install"
     ]
     PROJECT_URL = "https://github.com/nmap/nmap"
@@ -30,7 +30,7 @@ class Dracnmap(HackingTool):
     DESCRIPTION = "Dracnmap is an open source program which is using to \n" \
                   "exploit the network and gathering information with nmap help."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Screetsec/Dracnmap.git",
+        "git clone https://github.com/Screetsec/Dracnmap.git",
         "cd Dracnmap && chmod +x dracnmap-v2.2-dracOs.sh  dracnmap-v2.2.sh"
     ]
     RUN_COMMANDS = ["cd Dracnmap;sudo ./dracnmap-v2.2.sh"]
@@ -92,8 +92,8 @@ class ReconSpider(HackingTool):
                   "Websites, Organizations and find out information from" \
                   " different sources.\n"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/bhavsec/reconspider.git",
-        "sudo apt install python3 python3-pip && cd reconspider && sudo python3 setup.py install"
+        "git clone https://github.com/bhavsec/reconspider.git",
+        "sudo apt install -y python3 python3-pip && cd reconspider && pip install --user ."
     ]
     RUN_COMMANDS = ["cd reconspider;python3 reconspider.py"]
     PROJECT_URL = "https://github.com/bhavsec/reconspider"
@@ -118,7 +118,7 @@ class Infoga(HackingTool):
                   "(ip, hostname, country,...) from different public source"
     INSTALL_COMMANDS = [
         "git clone https://github.com/m4ll0k/Infoga.git",
-        "cd Infoga;sudo python3 setup.py install"
+        "cd Infoga && pip install --user ."
     ]
     RUN_COMMANDS = ["cd Infoga;python3 infoga.py"]
     PROJECT_URL = "https://github.com/m4ll0k/Infoga"
@@ -185,7 +185,7 @@ class PortScannerRanger(HackingTool):
                   "all alive hosts within your range that you specify."
     INSTALL_COMMANDS = [
         "git clone https://github.com/floriankunushevci/rang3r.git;"
-        "sudo pip install termcolor"]
+        "pip install --user termcolor"]
     PROJECT_URL = "https://github.com/floriankunushevci/rang3r"
 
     def run(self):

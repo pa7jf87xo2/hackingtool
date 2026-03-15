@@ -10,13 +10,11 @@ class Dalfox(HackingTool):
     TITLE = "DalFox (Finder of XSS)"
     DESCRIPTION = "XSS Scanning and Parameter Analysis tool."
     INSTALL_COMMANDS = [
-        "sudo apt-get install golang",
-        "sudo git clone https://github.com/hahwul/dalfox",
-        "cd dalfox;go install"
+        "sudo apt-get install -y golang",
+        "go install github.com/hahwul/dalfox/v2@latest",
     ]
     RUN_COMMANDS = [
-        "~/go/bin/dalfox",
-        'echo "You Need To Run manually by using [!]~/go/bin/dalfox [options]"'
+        "~/go/bin/dalfox --help",
     ]
     PROJECT_URL = "https://github.com/hahwul/dalfox"
 
@@ -128,7 +126,7 @@ class RVuln(HackingTool):
     TITLE = "RVuln"
     DESCRIPTION = "Multi-threaded and Automated Web Vulnerability Scanner written in Rust."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/iinc0gnit0/RVuln.git;"
+        "git clone https://github.com/iinc0gnit0/RVuln.git;"
         "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;"
         "source $HOME/.cargo/env;"
         "sudo apt install librust-openssl-dev;"

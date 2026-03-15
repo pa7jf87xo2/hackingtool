@@ -10,7 +10,7 @@ class TheFatRat(HackingTool):
         "which can bypass most anti-virus."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Screetsec/TheFatRat.git",
+        "git clone https://github.com/Screetsec/TheFatRat.git",
         "cd TheFatRat && chmod +x setup.sh",
     ]
     RUN_COMMANDS = ["cd TheFatRat && sudo bash setup.sh"]
@@ -36,7 +36,7 @@ class Brutal(HackingTool):
         "virus attacks and launch listener for a Human Interface Device."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Screetsec/Brutal.git",
+        "git clone https://github.com/Screetsec/Brutal.git",
         "cd Brutal && chmod +x Brutal.sh",
     ]
     RUN_COMMANDS = ["cd Brutal && sudo bash Brutal.sh"]
@@ -60,7 +60,7 @@ class Stitch(HackingTool):
         "[!] Refer to the project link for Windows & macOS support."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/nathanlopez/Stitch.git",
+        "git clone https://github.com/nathanlopez/Stitch.git",
         "cd Stitch && pip install --user -r lnx_requirements.txt",
     ]
     RUN_COMMANDS = ["cd Stitch && sudo python3 main.py"]
@@ -74,7 +74,7 @@ class MSFVenom(HackingTool):
         "types of payloads, based on user choice."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/g0tmi1k/msfpc.git",
+        "git clone https://github.com/g0tmi1k/msfpc.git",
         "cd msfpc && chmod +x msfpc.sh",
     ]
     RUN_COMMANDS = ["cd msfpc && sudo bash msfpc.sh -h -v"]
@@ -85,7 +85,7 @@ class Venom(HackingTool):
     TITLE = "Venom Shellcode Generator"
     DESCRIPTION = "Venom exploits apache2 webserver to deliver LAN payloads via fake webpages."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/r00t-3xp10it/venom.git",
+        "git clone https://github.com/r00t-3xp10it/venom.git",
         # Removed "sudo ./venom.sh -u" from install — interactive, runs the tool during install
         "sudo chmod -R 775 venom*/ && cd venom*/ && cd aux && sudo bash setup.sh",
     ]
@@ -97,7 +97,7 @@ class Spycam(HackingTool):
     TITLE = "Spycam"
     DESCRIPTION = "Generates a Win32 payload that captures webcam images every 1 minute."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/indexnotfound404/spycam.git",
+        "git clone https://github.com/indexnotfound404/spycam.git",
         "cd spycam && bash install.sh && chmod +x spycam",
     ]
     RUN_COMMANDS = ["cd spycam && ./spycam"]
@@ -115,7 +115,7 @@ class MobDroid(HackingTool):
 class Enigma(HackingTool):
     TITLE = "Enigma"
     DESCRIPTION = "Enigma is a Multiplatform payload dropper."
-    INSTALL_COMMANDS = ["sudo git clone https://github.com/UndeadSec/Enigma.git"]
+    INSTALL_COMMANDS = ["git clone https://github.com/UndeadSec/Enigma.git"]
     RUN_COMMANDS = ["cd Enigma && sudo python3 enigma.py"]
     PROJECT_URL = "https://github.com/UndeadSec/Enigma"
 

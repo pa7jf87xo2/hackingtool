@@ -13,7 +13,7 @@ class AnonymouslySurf(HackingTool):
     # Deleting the source on install means there is no retry if install fails.
     # Now kept in a separate step so failure does not destroy the source.
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Und3rf10w/kali-anonsurf.git",
+        "git clone https://github.com/Und3rf10w/kali-anonsurf.git",
         "cd kali-anonsurf && sudo ./installer.sh",
     ]
     RUN_COMMANDS = ["sudo anonsurf start"]
@@ -32,7 +32,7 @@ class Multitor(HackingTool):
     TITLE = "Multitor"
     DESCRIPTION = "How to stay in multi places at the same time."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/trimstray/multitor.git",
+        "git clone https://github.com/trimstray/multitor.git",
         "cd multitor && sudo bash setup.sh install",
     ]
     RUN_COMMANDS = [

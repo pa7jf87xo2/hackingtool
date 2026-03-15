@@ -50,7 +50,7 @@ class BulkExtractor(HackingTool):
     def gui_mode(self):
         console.print(Panel(Text(self.TITLE, justify="center"), style="bold magenta"))
         console.print("[bold magenta]Cloning repository and attempting to run GUI...[/]")
-        os.system("sudo git clone https://github.com/simsong/bulk_extractor.git")
+        os.system("git clone https://github.com/simsong/bulk_extractor.git")
         os.system("ls src/ && cd .. && cd java_gui && ./BEViewer")
         console.print(
             "[magenta]If you get an error after clone go to /java_gui/src/ and compile the .jar file && run ./BEViewer[/]")

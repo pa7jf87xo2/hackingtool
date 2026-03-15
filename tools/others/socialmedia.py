@@ -28,7 +28,7 @@ class BruteForce(HackingTool):
     DESCRIPTION = "Brute_Force_Attack Gmail Hotmail Twitter Facebook Netflix \n" \
                   "[!] python3 Brute_Force.py -g <Account@gmail.com> -l <File_list>"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Matrix07ksa/Brute_Force.git",
+        "git clone https://github.com/Matrix07ksa/Brute_Force.git",
         "cd Brute_Force;sudo pip3 install proxylist;pip3 install mechanize"
     ]
     RUN_COMMANDS = ["cd Brute_Force;python3 Brute_Force.py -h"]
@@ -39,7 +39,7 @@ class Faceshell(HackingTool):
     TITLE = "Facebook Attack"
     DESCRIPTION = "Facebook BruteForcer"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/Matrix07ksa/Brute_Force.git",
+        "git clone https://github.com/Matrix07ksa/Brute_Force.git",
         "cd Brute_Force;sudo pip3 install proxylist;pip3 install mechanize"
     ]
     PROJECT_URL = "https://github.com/Matrix07ksa/Brute_Force"
@@ -59,7 +59,7 @@ class AppCheck(HackingTool):
     TITLE = "Application Checker"
     DESCRIPTION = "Tool to check if an app is installed on the target device through a link."
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/jakuta-tech/underhanded.git",
+        "git clone https://github.com/jakuta-tech/underhanded.git",
         "cd underhanded && sudo chmod +x underhanded.sh"
     ]
     RUN_COMMANDS = ["cd underhanded;sudo bash underhanded.sh"]

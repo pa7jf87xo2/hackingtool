@@ -21,7 +21,7 @@ class Apk2Gold(HackingTool):
     TITLE = "Apk2Gold"
     DESCRIPTION = "Apk2Gold is a CLI tool for decompiling Android apps to Java"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/lxdvs/apk2gold.git",
+        "git clone https://github.com/lxdvs/apk2gold.git",
         "cd apk2gold;sudo bash make.sh"
     ]
     PROJECT_URL = "https://github.com/lxdvs/apk2gold "
@@ -39,7 +39,7 @@ class Jadx(HackingTool):
                   "[*] decode AndroidManifest.xml and other resources from " \
                   "resources.arsc"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/skylot/jadx.git",
+        "git clone https://github.com/skylot/jadx.git",
         # Bug 30 fix: gradlew dist requires Java — check first
         "java -version 2>&1 | grep -q 'version' && cd jadx && ./gradlew dist || echo '[ERROR] Java not found. Install: sudo apt install default-jdk'",
     ]

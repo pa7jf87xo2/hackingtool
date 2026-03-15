@@ -9,7 +9,7 @@ class Web2Attack(HackingTool):
     TITLE = "Web2Attack"
     DESCRIPTION = "Web hacking framework with tools, exploits by python"
     INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/santatic/web2attack.git"
+        "git clone https://github.com/santatic/web2attack.git"
     ]
     RUN_COMMANDS = ["cd web2attack && sudo python3 w2aconsole"]
     PROJECT_URL = "https://github.com/santatic/web2attack"
@@ -41,7 +41,7 @@ class SubDomainFinder(HackingTool):
     )
     INSTALL_COMMANDS = [
         "sudo pip3 install requests argparse dnspython",
-        "sudo git clone https://github.com/aboul3la/Sublist3r.git",
+        "git clone https://github.com/aboul3la/Sublist3r.git",
         "cd Sublist3r && sudo pip3 install -r requirements.txt"
     ]
     RUN_COMMANDS = ["cd Sublist3r && python3 sublist3r.py -h"]
@@ -54,7 +54,7 @@ class CheckURL(HackingTool):
         "Detect evil urls that uses IDN Homograph Attack.\n\t"
         "[!] python3 checkURL.py --url google.com"
     )
-    INSTALL_COMMANDS = ["sudo git clone https://github.com/UndeadSec/checkURL.git"]
+    INSTALL_COMMANDS = ["git clone https://github.com/UndeadSec/checkURL.git"]
     RUN_COMMANDS = ["cd checkURL && python3 checkURL.py --help"]
     PROJECT_URL = "https://github.com/UndeadSec/checkURL"
 
@@ -62,12 +62,14 @@ class CheckURL(HackingTool):
 class Blazy(HackingTool):
     TITLE = "Blazy(Also Find ClickJacking)"
     DESCRIPTION = "Blazy is a modern login page bruteforcer"
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/UltimateHackers/Blazy.git",
-        "cd Blazy && sudo pip2.7 install -r requirements.txt"
-    ]
-    RUN_COMMANDS = ["cd Blazy && sudo python2.7 blazy.py"]
+    INSTALL_COMMANDS = []
+    RUN_COMMANDS = []
     PROJECT_URL = "https://github.com/UltimateHackers/Blazy"
+    ARCHIVED = True
+    ARCHIVED_REASON = "Python 2 only (pip2.7/python2.7). Repo archived/unmaintained."
+
+    def __init__(self):
+        super().__init__(installable=False, runnable=False)
 
 
 class SubDomainTakeOver(HackingTool):
@@ -80,7 +82,7 @@ class SubDomainTakeOver(HackingTool):
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/edoardottt/takeover.git",
-        "cd takeover;sudo python3 setup.py install"
+        "cd takeover && pip install --user ."
     ]
     PROJECT_URL = "https://github.com/edoardottt/takeover"
 
@@ -97,7 +99,7 @@ class Dirb(HackingTool):
         "attack against \n a web server and analyzing the response."
     )
     INSTALL_COMMANDS = [
-        "sudo git clone https://gitlab.com/kalilinux/packages/dirb.git",
+        "git clone https://gitlab.com/kalilinux/packages/dirb.git",
         "cd dirb;sudo bash configure;make"
     ]
     PROJECT_URL = "https://gitlab.com/kalilinux/packages/dirb"
