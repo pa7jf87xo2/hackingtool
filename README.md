@@ -1,6 +1,8 @@
 <div align="center">
 
-# HackingTool
+<img src="images/logo.svg" alt="HackingTool" width="600">
+
+<br>
 
 **All-in-One Hacking Tool for Security Researchers & Pentesters**
 
