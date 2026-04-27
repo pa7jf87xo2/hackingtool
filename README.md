@@ -11,7 +11,7 @@ This tool is intended for **educational purposes only**. The developers are not 
 
 ## 📋 Requirements
 
-- Python 3.6+
+- Python 3.8+
 - Linux-based OS (Kali Linux recommended)
 - Root privileges (for some tools)
 
@@ -77,3 +77,7 @@ This project is licensed under the GNU General Public License v3.0 — see the [
 
 - Original project by [Z4nzu](https://github.com/Z4nzu/hackingtool)
 - All tool authors and contributors
+
+## 🗒️ Personal Notes
+
+> This is my personal fork used for learning and lab practice. I primarily use the Information Gathering and Hash Cracking sections. Tested on Ubuntu 22.04 in addition to Kali.
