@@ -82,6 +82,6 @@ This project is licensed under the GNU General Public License v3.0 — see the [
 
 > This is my personal fork used for learning and lab practice. I primarily use the Information Gathering and Hash Cracking sections. Tested on Ubuntu 22.04 in addition to Kali.
 >
-> **Setup tip:** On Ubuntu 22.04, I had to run `sudo apt install python3-pip` before `install.sh`.
+> **Setup tip:** On Ubuntu 22.04, I had to run `sudo apt install python3-pip` before `install.sh` would complete without errors. Also needed `sudo apt install git python3-dev` to satisfy a couple of missing build dependencies.
 >
-> **Ubuntu 22.04 fix:** If you see `ModuleNotFoundError: No module named 'distutils'`, run `sudo apt install python3-distutils` to resolve it.
+> **Useful alias** (add to `~/.bashrc`): `alias htool='cd ~/tools/hackingtool && sudo python3 hackingtool.py'`
