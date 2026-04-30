@@ -82,6 +82,6 @@ This project is licensed under the GNU General Public License v3.0 — see the [
 
 > This is my personal fork used for learning and lab practice. I primarily use the Information Gathering and Hash Cracking sections. Tested on Ubuntu 22.04 in addition to Kali.
 >
-> **Setup tip:** On Ubuntu 22.04, I had to run `sudo apt install python3-pip` before `install.sh`.
+> **Setup tip:** On Ubuntu 22.04, I had to run `sudo apt install python3-pip` before `install.sh` would complete without errors. Also needed `sudo apt install git python3-dev` to get everything building cleanly.
 >
-> **Ubuntu 22.04 fix:** If you hit a `externally-managed-environment` pip error, use `pip install --break-system-packages -r requirements.txt` or set up a venv first (`python3 -m venv venv && source venv/bin/activate`).
+> **Virtualenv tip:** I recommend running inside a venv to avoid polluting system packages: `python3 -m venv venv && source venv/bin/activate` before installing.
