@@ -84,7 +84,4 @@ This project is licensed under the GNU General Public License v3.0 — see the [
 >
 > **Setup tip:** On Ubuntu 22.04, I had to run `sudo apt install python3-pip` before `install.sh`.
 >
-> **Ubuntu 22.04 full pre-install steps:**
-> ```bash
-> sudo apt update && sudo apt install -y python3-pip git
-> ```
+> **Ubuntu 22.04 fix:** If you hit a `externally-managed-environment` pip error, use `pip install --break-system-packages -r requirements.txt` or set up a venv first (`python3 -m venv venv && source venv/bin/activate`).
